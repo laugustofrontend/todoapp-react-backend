@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose')
 
 const infoDb = {
@@ -11,6 +10,4 @@ const infoDb = {
 
 mongoose.Promise = global.Promise
 
-module.exports = mongoose.connect(`mongodb://${infoDb.user}:${infoDb.pass}@${infoDb.host}:${infoDb.port}/${infoDb.db}`)
-
-// 
+module.exports = mongoose.connect(`mongodb://${infoDb.user}:${infoDb.pass}@${infoDb.host}:${infoDb.port}/${infoDb.db}`, { useNewUrlParser: true })
